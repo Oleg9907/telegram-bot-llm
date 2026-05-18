@@ -1,10 +1,10 @@
 import telebot as tb
 from google import genai
 
-key = '8301571937:AAFCS3pFFff-vgaKN7bS_VA52nbAMmDV5No'
+key = f.open('key.txt', 'r').readline().strip()
 bot = tb.TeleBot(key)
 
-GEMINI_API_KEY = 'AIzaSyBrTBcB0JH2s06pVqSfPWznUVmIgigXpS8'
+GEMINI_API_KEY = f.open('gemini_key.txt', 'r').readline().strip()
 client = genai.Client(api_key = GEMINI_API_KEY)
 
 
